@@ -13,7 +13,7 @@ print(titanic.head().to_string())  # Force table display
 print("\nData Types:\n", titanic.dtypes)
 print("\nMissing Values:\n", titanic.isnull().sum())
 
-# Data Cleaning
+#Task 1 -Data Cleaning
 
 titanic['age'] = titanic.groupby(['sex', 'pclass'])['age'].transform(
     lambda x: x.fillna(x.median())
